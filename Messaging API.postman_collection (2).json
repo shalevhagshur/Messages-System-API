@@ -22,15 +22,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/messages/",
-					"protocol": "http",
+					"raw": "https://messagesystemapi.onrender.com/api/messages/",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"messagesystemapi",
+						"onrender",
+						"com"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"messages",
@@ -46,15 +44,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/messages/all/",
-					"protocol": "http",
+					"raw": "https://messagesystemapi.onrender.com/api/messages/all/",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"messagesystemapi",
+						"onrender",
+						"com"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"messages",
@@ -83,15 +79,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/messages/unread/",
-					"protocol": "http",
+					"raw": "https://messagesystemapi.onrender.com/api/messages/unread/",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"messagesystemapi",
+						"onrender",
+						"com"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"messages",
@@ -108,15 +102,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/messages/1",
-					"protocol": "http",
+					"raw": "https://messagesystemapi.onrender.com/api/messages/1",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"messagesystemapi",
+						"onrender",
+						"com"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"messages",
@@ -132,15 +124,13 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/messages/8/delete/",
-					"protocol": "http",
+					"raw": "https://messagesystemapi.onrender.com/api/messages/8/delete/",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"messagesystemapi",
+						"onrender",
+						"com"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"messages",
