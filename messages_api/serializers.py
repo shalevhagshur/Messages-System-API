@@ -30,7 +30,7 @@ class MessageSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Message
-        fields = ['id', 'sender', 'receiver', 'message', 'subject', 'creation_date', 'is_read', 'receiver_username']
+        fields = ['id', 'sender', 'message', 'subject', 'creation_date', 'is_read', 'receiver_username']
         read_only_fields = ('id', 'sender', 'creation_date', 'is_read')
 
     def create(self, validated_data):
@@ -43,9 +43,11 @@ class MessageSerializer(serializers.ModelSerializer):
         
         validated_data['receiver'] = receiver
         validated_data['sender'] = self.context['request'].user  # Set sender from request
-        return super().create(validated_data)
+        message = super().create(validated_data)
+        return message
 
     def to_representation(self, instance):
         representation = super().to_representation(instance)
-        representation.pop('receiver_username', None)  # Remove receiver_username from response
+        # Add the receiver's username to the output for clarity
+        representation['receiver_username'] = instance.receiver.username
         return representation
