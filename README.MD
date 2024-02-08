@@ -49,7 +49,7 @@ This project implements a simple messaging system using Django and Django REST F
     python manage.py runserver
 
 6. Usage
-The API is accessible at http://127.0.0.1:8000/api/.
+The API is accessible at https://messagesystemapi.onrender.com/api/.
 Use the following endpoints to interact with the API:
 /api/register/ - For user registration.
 /api/token/ - To obtain authentication tokens.
