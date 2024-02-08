@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "7cb73d87-7761-46e7-b17f-d6e9da32ee82",
+		"name": "Messaging API",
+		"description": "in this collection you can test all the required functionalities such as:\n\n- writing a message\n- getting all messages for specific user (the filtering happens through the user id from the token)\n- Get all unread messages for a specific user\n- Read message (return one message)\n- Delete message (as owner or as receiver)\n    \n\n**All routes already have a access token assigned to them**\n\n**inside the data base you already have 2 users for testing the password for both is** password123\n\n**user names are** newuser and newuser2 the email for both is [newuser@example.com](https://mailto:newuser@example.com)\n\n(in case you wanna login to the users yourselfs the route is /api/token/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32839724"
+	},
+	"item": [
+		{
+			"name": "write message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"receiver_username\": \"newuser2\",\r\n  \"message\": \"newuser@example.com\",\r\n  \"subject\": \"password123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/messages/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"messages",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all messages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/messages/all/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"messages",
+						"all",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get unread messages",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/messages/unread/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"messages",
+						"unread",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "detail message",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/messages/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"messages",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete message",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/messages/8/delete/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"messages",
+						"8",
+						"delete",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA4Njk3OTA4LCJpYXQiOjE3MDc0MDE5MDgsImp0aSI6ImQwNzAwNTM2ZmVmODQxZjc5YzM0YzdjMGFlZWQ1NzM2IiwidXNlcl9pZCI6MX0.AjauB-vjiugRV31utTCyV9_wChLcDpMfQPMZ5TtIuSM",
+				"type": "string"
+			}
+		]
+	}
+}
