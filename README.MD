@@ -23,15 +23,15 @@ This project implements a simple messaging system using Django and Django REST F
 - pip
 - Virtualenv (recommended)
 
-### Setup
 
+### Setup (this setup is for running the server locally)
 1. Clone the repository:
    ```bash
    git clone https://github.com/shalevhagshur/Messages-System-API.git
 
 2. Navigate to the project directory:
     ```bash
-    cd messaging-api
+    cd Messages-System-API
 
 3. Create and activate a virtual environment:
     python -m venv venv
